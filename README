@@ -1,0 +1,20 @@
+Speakup + voxin on 32 or 64 bits machines
+2013, 2016 Gilles Casse <gcasse@oralux.org> 
+
+This software installs voxinup [1], the speakup connector for voxin.
+
+* install.sh
+
+This installer will disable the espeakup from your system.
+Run the install.sh script in a shell terminal using this command line:
+
+sudo ./install.sh
+
+* uninstall.sh
+The uninstall.sh script removes voxinup and enables espeakup instead.
+
+sudo ./install.sh
+
+
+* [1] sources
+https://github.com/Oralux/voxinup

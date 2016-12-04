@@ -1,0 +1,18 @@
+# Original file from the Arch Linux community repository:
+# https://git.archlinux.org/svntogit/community.git/tree/espeakup/trunk/espeakup.service
+
+[Unit]
+Description=Software speech output for Speakup
+# voxinup needs to start after the audio devices appear, hopefully this should go away in the future
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service sound.target
+
+[Service]
+Type=forking
+PIDFile=/run/voxinup.pid
+ExecStart=/usr/bin/voxinup
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+
+[Install]
+WantedBy=sound.target
