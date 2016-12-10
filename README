@@ -5,8 +5,8 @@ This software installs voxinup [1], the speakup connector for voxin.
 
 * install.sh
 
-This installer will disable the espeakup from your system.
-Run the install.sh script in a shell terminal using this command line:
+This installer will disable the espeakup from your system.  Run the
+install.sh script in a shell terminal using this command line:
 
 sudo ./install.sh
 
@@ -16,5 +16,10 @@ The uninstall.sh script removes voxinup and enables espeakup instead.
 sudo ./install.sh
 
 
-* [1] sources
+* [1] voxinup
+** sources
 https://github.com/Oralux/voxinup
+
+** binaries
+The Arch Linux binary package under build/archlinux can be rebuild
+using the PKGBUILD file under packages/archlinux .
