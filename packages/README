@@ -17,6 +17,6 @@ Example: packages for Ubuntu 16.10
 
 # the signed packages are available in build.i386.sig and build.amd64.sig
 
-* copy the packages to the voxin installer
-rm debian/*
-cp build.{i386,amd64}.sig/*deb debian
+* copy the packages to voxinup_install/build/debian
+rm ../build/debian/*
+cp build.{i386,amd64}.sig/*deb ../build/debian
