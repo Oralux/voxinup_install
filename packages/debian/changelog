@@ -1,4 +1,4 @@
-voxinup (1:2.2.1-1) unstable; urgency=low
+voxinup (1:2.2.1-1) trusty; urgency=medium
 
   * Release from the corresponding tag at https://github.com/Oralux/voxinup
 
