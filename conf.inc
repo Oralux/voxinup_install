@@ -21,6 +21,9 @@ check_distro()
 	    install_connector=debian_install_connector
 	    uninstall_connector=debian_uninstall_connector
 	    status=0
+	    if [ "$ARCH" = "x86_64" ]; then
+		ARCH=amd64
+	    fi
 	fi
     fi
     return $status
@@ -78,15 +81,14 @@ debian_check_libvoxin() {
 }
 
 debian_install_connector() {
-    echo TODO
     # apt-get install -y lib32gcc1 libc6-i386 libasound2:i386
-    # apt-get remove -y espeakup
-    # dpkg -i packages/voxinup_*_$ARCH.deb
+    apt-get remove -y espeakup
+    dpkg -i build/debian/voxinup_*_$ARCH.deb
 }
 
 debian_uninstall_connector() {
     echo TODO
-    # apt-get remove -y voxinup
-    # apt-get install -y espeakup
+    apt-get remove -y voxinup
+    apt-get install -y espeakup
 }
 

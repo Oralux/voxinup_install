@@ -2,7 +2,10 @@
 
 . ./conf.inc
 
-#apt-get install debhelper
+## apt-get install debhelper
+# apt-get install devscripts dh-systemd
+# dpkg -i libvoxin1-dev_1.1.2-1_amd64.deb
+
 
 function build_pkg() {
     local PN=$1
