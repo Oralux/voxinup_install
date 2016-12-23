@@ -1,0 +1,25 @@
+Source: voxinup
+Section: admin
+Priority: extra
+Maintainer: Gilles Casse <gcasse@oralux.org>
+Build-Depends: debhelper (>= 9),
+	       dh-systemd (>= 1.5),
+	       libasound2-dev
+Standards-Version: 3.9.3
+Homepage: https://github.com/Oralux/voxinup
+
+Package: voxinup
+Architecture: i386
+Multi-Arch: foreign
+Conflicts: espeakup
+Replaces: spk-connect-ttsynth
+Suggests: libasound2-plugins
+Depends: ${shlibs:Depends}, 
+	 ${misc:Depends},
+	 libasound2
+Description: Connector between Voxin and Speakup or the Jupiter adapter
+ voxinup is available in two modes:
+ - a daemon that connects the speakup kernel modules to the Voxin
+   software speech synthesizer through the /dev/softsynth device.
+ - a process communicating through its standard input and outpout with
+   the Jupiter adapter.

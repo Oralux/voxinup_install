@@ -1,0 +1,6 @@
+The package is based on the original espeakup Debian package by:
+
+    Samuel Thibault <sthibault@debian.org> on Sat, 26 Sep 2009 18:12:58 +0200
+
+voxinup derives from the spk-connect-ttsynth sources originally
+downloaded from http://www.speakupmodified.org/ttsynth

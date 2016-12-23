@@ -1,0 +1,56 @@
+#!/usr/bin/make -f
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+%:
+	dh $@ --with=systemd
+
+clean:
+	dh_testroot
+	dh_clean
+#	debconf-updatepo
+	$(MAKE) clean
+	rm -f build-stamp
+	rm -f voxinup
+
+build-voxinup: build-stamp
+build-stamp:
+	$(MAKE)
+
+	touch $@
+
+build: build-arch build-indep
+build-indep:
+build-arch: build-voxinup
+
+binary-arch: build-voxinup
+	dh_testroot
+	dh_prep
+
+	$(MAKE) install DESTDIR=`pwd`/debian/voxinup
+
+	dh_install
+	dh_installdirs
+	dh_installdebconf
+	dh_installman
+	dh_installdocs
+	dh_installchangelogs
+	dh_systemd_enable
+	dh_installinit -- start 10 S .
+	dh_systemd_start
+
+	dh_compress
+	dh_fixperms
+	dh_strip
+	dh_shlibdeps
+
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-indep:
+
+binary: binary-arch binary-indep
+
+.PHONY: clean build build-voxinup binary binary-arch binary-indep
