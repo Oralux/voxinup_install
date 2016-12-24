@@ -23,6 +23,8 @@ check_distro()
 	    status=0
 	    if [ "$ARCH" = "x86_64" ]; then
 		ARCH=amd64
+	    else	
+		ARCH=i386
 	    fi
 	fi
     fi
