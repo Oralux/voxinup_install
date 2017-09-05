@@ -33,6 +33,7 @@ check_distro()
 
 # arch linux based commands
 arch_check_speakup() {
+	modprobe speakup_soft
     lsmod | grep -q speakup
 }
 
@@ -75,7 +76,8 @@ arch_uninstall_connector() {
 
 # debian based specific commands
 debian_check_speakup() {
-    lsmod | grep -q speakup
+	modprobe speakup_soft  
+	lsmod | grep -q speakup
 }
 
 debian_check_libvoxin() {
