@@ -1,3 +1,10 @@
+voxinup (1:2.3.1-1) unstable; urgency=medium
+
+  * Release from tag 2.3.1 at https://github.com/Oralux/voxinup
+  * debian/rules: load module speakup_soft (voxinup.modules-load.d)
+
+ -- Gilles Casse <gcasse@oralux.org>  Tue, 05 Sep 2017 16:32:31 +0200
+
 voxinup (1:2.2.1-1) trusty; urgency=medium
 
   * Release from the corresponding tag at https://github.com/Oralux/voxinup

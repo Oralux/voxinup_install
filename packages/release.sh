@@ -2,10 +2,10 @@
 
 . ./conf.inc
 
-## apt-get install debhelper
-# apt-get install devscripts dh-systemd
-# dpkg -i libvoxin1-dev_1.1.2-1_amd64.deb
-
+function install_dep() {
+    dpkg -V libvoxin1-dev
+    su -c "apt-get update && apt-get install debhelper devscripts dh-systemd sox"
+}
 
 function build_pkg() {
     local PN=$1
@@ -33,6 +33,8 @@ function build_pkg() {
 cd build
 download
 cd ..
+
+install_dep
 
 if [ "$(uname -m)" = "x86_64" ]; then
     ARCH=amd64

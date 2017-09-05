@@ -10,7 +10,7 @@ After=systemd-udev-settle.service sound.target
 [Service]
 Type=forking
 PIDFile=/run/voxinup.pid
-ExecStart=/usr/bin/voxinup
+ExecStart=/usr/bin/voxinup -D
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=always
 

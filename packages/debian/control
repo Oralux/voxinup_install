@@ -16,6 +16,7 @@ Replaces: spk-connect-ttsynth
 Suggests: libasound2-plugins
 Depends: ${shlibs:Depends}, 
 	 ${misc:Depends},
+	 lsb-base,
 	 libasound2,
 	 libvoxin1
 Description: Connector between Voxin and Speakup or the Jupiter adapter

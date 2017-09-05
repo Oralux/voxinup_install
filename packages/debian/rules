@@ -8,3 +8,8 @@ override_dh_auto_install:
 
 override_dh_installinit:
 	dh_installinit -- start 10 S .
+
+
+override_dh_install:
+	dh_install --fail-missing
+	install -D -m0644 $(CURDIR)/debian/voxinup.modules-load.d $(CURDIR)/debian/voxinup/lib/modules-load.d/voxinup.conf
