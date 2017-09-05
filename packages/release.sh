@@ -4,7 +4,7 @@
 
 function install_dep() {
     dpkg -V libvoxin1-dev
-    su -c "apt-get update && apt-get install debhelper devscripts dh-systemd sox"
+    su -c "apt-get update && apt-get install debhelper devscripts dh-systemd sox libasound2-dev"
 }
 
 function build_pkg() {
