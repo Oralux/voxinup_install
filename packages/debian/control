@@ -18,7 +18,7 @@ Depends: ${shlibs:Depends},
 	 ${misc:Depends},
 	 lsb-base,
 	 libasound2,
-	 libvoxin1
+	 libvoxin1 (>= 1)
 Description: Connector between Voxin and Speakup or the Jupiter adapter
  voxinup is available in two modes:
  - a daemon that connects the speakup kernel modules to the Voxin
