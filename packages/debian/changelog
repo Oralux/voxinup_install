@@ -1,3 +1,9 @@
+voxinup (1:2.3.2-1) unstable; urgency=medium
+
+  * Release from tag 2.3.2 at https://github.com/Oralux/voxinup
+
+ -- Gilles Casse <gcasse@oralux.org>  Sun, 04 Mar 2018 23:47:52 +0100
+
 voxinup (1:2.3.1-1) unstable; urgency=medium
 
   * Release from tag 2.3.1 at https://github.com/Oralux/voxinup

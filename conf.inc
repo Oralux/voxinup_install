@@ -89,7 +89,7 @@ debian_install_connector() {
 	set +e
 	dpkg -V espeakup && apt-get remove -y espeakup
 	set -e
-    dpkg -i build/debian/voxinup_*_$ARCH.deb
+	dpkg -i build/debian/voxinup_*_$ARCH.deb
 	systemctl enable voxinup
 }
 

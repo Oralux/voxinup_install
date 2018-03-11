@@ -4,7 +4,7 @@
 
 function install_dep() {
     dpkg -V libvoxin1-dev
-    su -c "apt-get update && apt-get install debhelper devscripts dh-systemd sox libasound2-dev"
+    su -c "apt-get update && apt-get install debhelper devscripts dh-systemd sox libasound2-dev dpkg-sig"
 }
 
 function build_pkg() {
@@ -26,7 +26,7 @@ function build_pkg() {
     debuild -us -uc 
     popd
     rm -rf $BUILD_DIR/$PN-$PV
-    find build -name "*deb" | while read i; do echo "--> $i"; lintian -i $i; done
+    find build -name "*.deb" | while read i; do echo "--> $i"; lintian -i $i; done
 }
 
 [ ! -d build ] && mkdir build
