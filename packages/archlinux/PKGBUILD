@@ -7,10 +7,10 @@
 # Original Maintainer: Michael Whapples <mwhapples atsign aim dot com>
 
 pkgname=voxinup
-pkgver=2.2.1
+pkgver=2.3.3
 pkgrel=1
 pkgdesc="Speakup connector for Voxin"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 license=('LGPL')
 url="https://github.com/Oralux/voxinup"
 depends=('alsa-lib')
@@ -20,7 +20,7 @@ conflicts=('spk-connect-ttsynth')
 source=("https://github.com/Oralux/$pkgname/archive/$pkgver.tar.gz"
 	"voxinup.conf"
 	"voxinup.service")
-md5sums=('1e6e2fb1bdcfab512d022a9ca15eafe6'
+md5sums=('08915164212f961e1ceec5ff5da7a094'
 	 '75eb512d510d6701b6f63390475dd34f'
 	 '606ac2fe9ea95a2c34e7c5ed5b1e0546')
 
