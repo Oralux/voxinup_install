@@ -3,7 +3,7 @@
 . ./conf.inc
 
 function install_dep() {
-    dpkg -V libvoxin1-dev
+    dpkg -V voxin
     su -c "apt-get update && apt-get install debhelper devscripts dh-systemd sox libasound2-dev dpkg-sig"
 }
 

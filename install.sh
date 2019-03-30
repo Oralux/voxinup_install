@@ -6,14 +6,9 @@ source conf.inc
 
 check_distro
 
-if [ "$ARCH" != amd64 ]; then
-    echo "Sorry, this build is only for a 64 bits CPU. Send an email to contact@oralux.org if 32 bits support is still required."
-    exit 0    
-fi
-
-$check_libvoxin
+$check_voxin
 if [ "$?" != "0" ]; then 
-    echo "install Voxin >= 1.00 before running this script."
+    echo "install Voxin >= 2.00 before running this script."
     exit 0
 fi
 

@@ -8,7 +8,7 @@ check_distro()
     # Check if this is an arch linux based distro
     if [ -e "/etc/pacman.conf" ]; then
 		check_speakup=arch_check_speakup
-		check_libvoxin=arch_check_libvoxin
+		check_voxin=arch_check_voxin
 		install_connector=arch_install_connector
 		uninstall_connector=arch_uninstall_connector
 		status=0
@@ -17,7 +17,7 @@ check_distro()
 		type dpkg &> /dev/null
 		if [ "$?" = "0" ]; then
 			check_speakup=debian_check_speakup
-			check_libvoxin=debian_check_libvoxin
+			check_voxin=debian_check_voxin
 			install_connector=debian_install_connector
 			uninstall_connector=debian_uninstall_connector
 			status=0
@@ -37,8 +37,8 @@ arch_check_speakup() {
     lsmod | grep -q speakup
 }
 
-arch_check_libvoxin() {
-    pacman -Q libvoxin &> /dev/null    
+arch_check_voxin() {
+    pacman -Q voxin &> /dev/null    
 }
 
 arch_install_connector() {
@@ -80,8 +80,8 @@ debian_check_speakup() {
 	lsmod | grep -q speakup
 }
 
-debian_check_libvoxin() {
-    dpkg -l "libvoxin*" &> /dev/null    
+debian_check_voxin() {
+    dpkg -l voxin &> /dev/null    
 }
 
 debian_install_connector() {

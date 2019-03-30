@@ -1,7 +1,7 @@
 # voxinup program version
 MAJ=2
 MIN=3
-REV=2
+REV=3
 
 PN=voxinup
 PV=$MAJ.$MIN.$REV
@@ -12,7 +12,7 @@ PKG=1
 # github url + sha256sum
 ARCHIVE=$MAJ.$MIN.$REV.tar.gz
 URL=https://github.com/Oralux/$PN/archive/$ARCHIVE
-SHA256=952c936a686107044937386c22713545243acd79b328f7c8309f60fd17f4ad39
+SHA256=510cbf8072ad5764ec611ba993ccb8208e62af3daace416e8327e7bda4e189f0
 
 # gnupg key used to sign packages
 SIGNING_KEY=AED093E5

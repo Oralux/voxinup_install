@@ -5,7 +5,7 @@ Maintainer: Gilles Casse <gcasse@oralux.org>
 Build-Depends: debhelper (>= 9),
 	       dh-systemd (>= 1.5),
 	       libasound2-dev,
-	       libvoxin1-dev
+	       voxin
 Standards-Version: 3.9.7
 Homepage: https://github.com/Oralux/voxinup
 
@@ -18,7 +18,7 @@ Depends: ${shlibs:Depends},
 	 ${misc:Depends},
 	 lsb-base,
 	 libasound2,
-	 libvoxin1 (>= 1)
+	 voxin (>= 2.0)
 Description: Connector between Voxin and Speakup or the Jupiter adapter
  voxinup is available in two modes:
  - a daemon that connects the speakup kernel modules to the Voxin
